@@ -8,12 +8,19 @@
     Considerando os dados coletados, apresente a média das notas e quantos cidadãos deram nota inferior a 5.
     */
 
-    //Entrada
 
 
-    //Processamento
+    let menor5 = 0;
+    let soma = 0;
 
-
-    //Saída
+    for (contador = 1; contador <= 15; contador++) {
+        let nota = parseInt(prompt("Qual nota você avalia a decoração ?"))
+        soma = soma + nota
+        if (nota < 5) {
+            menor5 = menor5 + 1
+        }
+    }
+const media = soma/15
+document.write(`${menor5} deram nota inferior a 5, a media das notas é ${media.toFixed(2)}`)
 
 </script>

@@ -7,12 +7,30 @@
     Apresente, ao fim do programa, qual foi a chapa ganhadora e a porcentagem de votos que a chapa recebeu.
     */
 
-    //Entrada
 
+    let chapa1 = 0;
+    let chapa2 = 0;
 
-    //Processamento
+    for (contador = 1; contador <= 14; contador++) {
+        const voto = parseInt(prompt("Qual chapa deseja confiar o voto (Chapa 1 ou chapa 2) ?"))
 
+        switch (voto) {
 
-    //Saída
+            case 1:
+                chapa1 = chapa1 + 1;
+                break;
+            case 2:
+                chapa2 = chapa2 + 1;
+                break;
+        }
+    }
+    if (chapa1 > chapa2) {
+        let perc = chapa1 / 14 * 100
+        document.write(` ${chapa1} A  chapa 1 foi a vencedora !.`)
+    } else {
+        let perc = chapa2 / 14 * 100
+        document.write(`${chapa2} A chapa 2 foi a vencedora !.`)
+    }
+
 
 </script>

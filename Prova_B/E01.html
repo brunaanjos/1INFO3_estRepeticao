@@ -5,13 +5,22 @@
     No fim do ano letivo, o professor terá que informar ao sistema a nota do trimestre de cada um dos seus 15 alunos.
     Apresente, ao fim do programa, quantos alunos ficaram com nota abaixo de 7 e quantos alunos ficaram com nota maior ou acima de 7. Apresente, também, a média das notas da turma.
     */
-
-    //Entrada
-
-
-    //Processamento
+    let abaixo7 = 0;
+    let acima7 = 0;
+    let totalNotas = 0;
 
 
-    //Saída
+
+    for (contador = 1; contador <= 15; contador++) {
+        const notas = Number(prompt("Qual é a nota do aluno ?"))
+        totalNotas = totalNotas + notas;
+        if (notas >= 7) {
+            acima7 = acima7 + 1;
+        } else {
+            abaixo7 = abaixo7 + 1
+        }
+    }
+
+    document.write(`${acima7} alunos tiraram uma nota acima de 7. ${abaixo7} alunos tiraram uma nota abaixo de 7.  A média da turma foi de ${(totalNotas/15).toFixed(2)}`)
 
 </script>
